@@ -204,6 +204,9 @@ div[data-tid="response-surface"] > div:first-child {
 }
 
 /* Left border for embedded content and replies preview */
+div[data-testid="componentUXWrapperTestId"] {
+    margin-top: 1em;
+}
 div[data-tid="adaptive-card"] {
     margin: 0 !important;
     border: 1px solid #333;

@@ -42,6 +42,7 @@ Or Manually Install:
 ## Changelog
 
 v0.3.6
+  - Added gap above embedded content (1em)
   - Removed padding on sides of channels again (compatible with Threads)
 
 v0.3.5
