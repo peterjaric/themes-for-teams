@@ -41,6 +41,15 @@ Or Manually Install:
 
 ## Changelog
 
+v0.4.1
+  - Fix: Code block line numbers now display correctly - no overlap or drift
+
+v0.4.0
+  - New: Disable Animations option - eliminates 246 CSS transitions for a snappier UI
+  - Performance: Eliminated redundant CSS loading (styles.css was being loaded 3x per page)
+  - Fix: Message pane padding selector now correctly targets the right container
+  - Fix: Compose area full-width selector now targets the footer
+
 v0.3.6
   - Added gap above embedded content (1em)
   - Removed padding on sides of channels again (compatible with Threads)

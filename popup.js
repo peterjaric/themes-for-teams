@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const themeSelect = document.getElementById('theme-select');
     const fontSelect = document.getElementById('font-select');
+    const animationsToggle = document.getElementById('animations-toggle');
     const status = document.getElementById('status');
     const themeCss = document.getElementById('theme-css');
-
     // Helper to set theme CSS
     function setThemeCss(theme) {
         if (theme === 'default' || !theme) {
@@ -60,9 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Load current settings
-    storageGet(['teamsTheme', 'teamsFont']).then(result => {
+    storageGet(['teamsTheme', 'teamsFont', 'teamsDisableAnimations']).then(result => {
         themeSelect.value = result.teamsTheme || 'default';
         fontSelect.value = result.teamsFont || 'default';
+        animationsToggle.checked = result.teamsDisableAnimations || false;
         setThemeCss(themeSelect.value);
         setFontFamily(fontSelect.value);
     });
@@ -81,6 +82,14 @@ document.addEventListener('DOMContentLoaded', function () {
         storageSet({ teamsFont: fontSelect.value }).then(() => {
             setFontFamily(fontSelect.value);
             status.textContent = 'Font updated!';
+            setTimeout(() => status.textContent = '', 1200);
+        });
+    });
+
+    // Save animations toggle on change
+    animationsToggle.addEventListener('change', function () {
+        storageSet({ teamsDisableAnimations: animationsToggle.checked }).then(() => {
+            status.textContent = animationsToggle.checked ? 'Animations disabled!' : 'Animations enabled!';
             setTimeout(() => status.textContent = '', 1200);
         });
     });

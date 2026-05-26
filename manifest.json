@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Themes for Teams",
-  "version": "0.3.5",
+  "version": "0.4.1",
   "description": "Custom Styles for Microsoft Teams to boost productivity.",
   "permissions": [
     "storage"
@@ -21,7 +21,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["styles.css", "themes/*.css"],
+      "resources": ["styles.css", "no-animations.css", "themes/*.css"],
       "matches": ["*://teams.microsoft.com/*"]
     }
   ],

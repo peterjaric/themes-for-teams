@@ -20,10 +20,10 @@ html {
 div[data-tid="channel-pane-viewport"] {
     scrollbar-gutter: both-edges !important;
 }
-div[data-tid="message-pane-layout"] > .fui-Primitive {
+div[data-tid="message-pane-body"] > .fui-Primitive {
     padding-left: 16px !important;
     padding-right: 16px !important;
-    max-width: 100% !important;    
+    max-width: 100% !important;
 }
 div[data-tid='message-pane-list-runway'],
 div[data-tid='channel-replies-runway'],
@@ -127,7 +127,7 @@ div[data-tid="post-message-subheader"] {
 */
 
 /* Expand the 'Post in channel' box */
-div[data-tid="message-pane-layout"] > .fui-Primitive > .fui-Flex {
+div[data-tid="message-pane-footer"] .fui-Flex {
     max-width: 100% !important;
 }
 
@@ -265,11 +265,18 @@ code {
     font-size: 85% !important;
     color: #e8912d !important;
     padding: 0 3px !important;
-    line-height: 1.8 !important;
     border-color: rgba(232, 232, 232, 0.13) !important;
+}
+/* inline code only — block code inherits Teams' line-height so numbers don't drift */
+:not(pre) > code {
+    line-height: 1.8 !important;
 }
 pre code {
     color: #fff !important;
+}
+/* Fix line numbers overlapping code — Teams removed this padding, restore it stably */
+pre[itemid^="codeBlockEditor"] {
+    padding: 14px 12px 8px 54px !important;
 }
 /* "strings" */
 code .hljs-string {

@@ -98,27 +98,14 @@
 
         // Theme selection logic - modular system with base + palette
     function injectTheme(theme) {
-        console.log('Teams Theme Extension: Applying theme -', theme);
-        
         // Remove any previously injected themes
         const oldBaseStyle = document.getElementById('teams-base-theme-style');
         const oldPaletteStyle = document.getElementById('teams-palette-style');
         if (oldBaseStyle) oldBaseStyle.remove();
         if (oldPaletteStyle) oldPaletteStyle.remove();
 
-        // For default theme, just use the original styles
+        // For default theme, styles.css is already injected by the manifest
         if (theme === 'default') {
-            fetch(ext.runtime.getURL('styles.css'))
-                .then(response => response.text())
-                .then(css => {
-                    const style = document.createElement('style');
-                    style.id = 'teams-base-theme-style';
-                    style.textContent = css;
-                    document.head.appendChild(style);
-                })
-                .catch(error => {
-                    console.error('Teams Theme Extension: Error loading default theme:', error);
-                });
             return;
         }
 
@@ -153,7 +140,6 @@
             baseStyle.textContent = baseCss;
             document.head.appendChild(baseStyle);
 
-            console.log('Teams Theme Extension: Theme applied successfully -', theme);
         })
         .catch(error => {
             console.error('Teams Theme Extension: Error loading modular theme:', error);
@@ -162,27 +148,30 @@
         });
     }
 
-    // Inject Teams Improvements CSS if enabled
-    function injectImprovements(enabled) {
-        const styleId = 'teams-improvements-style';
+    // Inject No Animations CSS if enabled
+    function injectNoAnimations(enabled) {
+        const styleId = 'teams-no-animations-style';
         const oldStyle = document.getElementById(styleId);
         if (oldStyle) oldStyle.remove();
         if (enabled) {
-            fetch(ext.runtime.getURL('styles.css'))
+            fetch(ext.runtime.getURL('no-animations.css'))
                 .then(response => response.text())
                 .then(css => {
                     const style = document.createElement('style');
                     style.id = styleId;
                     style.textContent = css;
                     document.head.appendChild(style);
+                })
+                .catch(error => {
+                    console.error('Teams Theme Extension: Error loading no-animations.css:', error);
                 });
         }
     }
 
-    storageGet(['teamsTheme', 'teamsFont']).then(result => {
+    storageGet(['teamsTheme', 'teamsFont', 'teamsDisableAnimations']).then(result => {
         injectTheme(result.teamsTheme || 'default');
         injectFont(result.teamsFont || 'default');
-        injectImprovements(true);
+        injectNoAnimations(result.teamsDisableAnimations || false);
     });
 
     // Listen for changes and apply live
@@ -193,6 +182,9 @@
             }
             if (changes.teamsFont) {
                 injectFont(changes.teamsFont.newValue || 'default');
+            }
+            if (changes.teamsDisableAnimations) {
+                injectNoAnimations(changes.teamsDisableAnimations.newValue || false);
             }
         }
     });
