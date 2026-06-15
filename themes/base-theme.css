@@ -113,8 +113,11 @@ html.theme-darkV2 .fui-FluentProvider {
 
 
     /* Text Colors - Dark Mode */
-    --colorNeutralForeground3: var(--theme-message-dark-text-primary, #FAFAFA) !important;
-    --colorNeutralForeground3BrandSelected: var(--theme-message-dark-text-muted, rgba(255, 255, 255, .8)) !important;
+    --colorNeutralForeground1: var(--theme-message-dark-text-primary, #FAFAFA) !important;
+    --colorNeutralForeground2: var(--theme-message-dark-text-secondary, var(--theme-message-dark-text-primary, #FAFAFA)) !important;
+    --colorNeutralForeground3: var(--theme-message-dark-text-tertiary, var(--theme-message-dark-text-muted, rgba(255, 255, 255, .8))) !important;
+    --colorNeutralForeground4: var(--theme-message-dark-text-muted, rgba(255, 255, 255, .8)) !important;
+    --colorNeutralForeground3BrandSelected: var(--theme-message-dark-text-inverse, var(--theme-message-dark-text-primary, #FAFAFA)) !important;
 
     /* Default Backgrounds - Dark Mode */
     --colorDefaultBackground1: var(--primary-brand);
