@@ -16,19 +16,36 @@
     --theme-color-80: 124, 17, 60;      /* Dark sunset */
     --theme-color-90: 91, 12, 44;       /* Deep sunset */
     --theme-color-100: 64, 7, 30;       /* Darkest sunset */
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(var(--theme-color-0));
+    --theme-message-light-subtle: rgb(var(--theme-color-5));
+    --theme-message-light-elevated: rgba(var(--theme-color-10), 0.45);
+    --theme-message-light-hover: rgba(var(--theme-color-80), 0.06);
+    --theme-message-light-selected: rgba(var(--theme-color-40), 0.12);
+    --theme-message-light-text-primary: rgb(var(--theme-color-100));
+    --theme-message-light-text-secondary: rgb(var(--theme-color-90));
+    --theme-message-light-text-tertiary: rgb(var(--theme-color-70));
+    --theme-message-light-text-inverse: rgb(255, 255, 255);
+    --theme-message-dark-canvas: rgb(var(--theme-color-90));
+    --theme-message-dark-elevated: rgb(var(--theme-color-80));
+    --theme-message-dark-hover: rgba(var(--theme-color-0), 0.06);
+    --theme-message-dark-selected: rgba(var(--theme-color-30), 0.24);
+    --theme-message-dark-text-primary: rgb(255, 247, 240);
+    --theme-message-dark-text-muted: rgba(255, 247, 240, 0.78);
 }
 
 /* ===== SUNSET GRADIENT OVERRIDE ===== */
 
 /* Dark Mode Sunset Gradient - Rich evening colors */
 html.theme-darkV2 div[data-tid="experience-layout"] {
-    background: 
+    background:
         /* Intense sunset glows for dark mode */
-        radial-gradient(circle at 20% 30%, 
+        radial-gradient(circle at 20% 30%,
             rgba(251, 146, 60, 0.7) 0%,      /* Sunset orange glow */
             rgba(239, 68, 68, 0.5) 25%,      /* Sunset red glow */
             transparent 60%),
-        radial-gradient(circle at 80% 70%, 
+        radial-gradient(circle at 80% 70%,
             rgba(220, 38, 127, 0.4) 0%,      /* Deep sunset pink glow */
             rgba(190, 24, 93, 0.3) 35%,      /* Magenta glow */
             transparent 65%),
@@ -46,13 +63,13 @@ html.theme-darkV2 div[data-tid="experience-layout"] {
 
 /* Light Mode Sunset Gradient - Soft morning colors */
 html.theme-defaultV2 div[data-tid="experience-layout"] {
-    background: 
+    background:
         /* Gentle sunset glows for light mode */
-        radial-gradient(circle at 20% 30%, 
+        radial-gradient(circle at 20% 30%,
             rgba(251, 146, 60, 0.4) 0%,      /* Sunset orange glow */
             rgba(239, 68, 68, 0.3) 25%,      /* Sunset red glow */
             transparent 60%),
-        radial-gradient(circle at 80% 70%, 
+        radial-gradient(circle at 80% 70%,
             rgba(220, 38, 127, 0.2) 0%,      /* Deep sunset pink glow */
             rgba(190, 24, 93, 0.15) 35%,     /* Magenta glow */
             transparent 65%),

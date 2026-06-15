@@ -16,19 +16,36 @@
     --theme-color-80: 15, 23, 42;       /* Very dark - #0F172A */
     --theme-color-90: 2, 6, 23;         /* Gradient dark - #020617 */
     --theme-color-100: 1, 4, 17;        /* Darkest - #010411 */
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(var(--theme-color-0));
+    --theme-message-light-subtle: rgb(var(--theme-color-5));
+    --theme-message-light-elevated: rgba(var(--theme-color-10), 0.45);
+    --theme-message-light-hover: rgba(var(--theme-color-80), 0.06);
+    --theme-message-light-selected: rgba(var(--theme-color-40), 0.12);
+    --theme-message-light-text-primary: rgb(var(--theme-color-100));
+    --theme-message-light-text-secondary: rgb(var(--theme-color-90));
+    --theme-message-light-text-tertiary: rgb(var(--theme-color-70));
+    --theme-message-light-text-inverse: rgb(255, 255, 255);
+    --theme-message-dark-canvas: rgb(8, 15, 32);
+    --theme-message-dark-elevated: rgb(var(--theme-color-80));
+    --theme-message-dark-hover: rgba(var(--theme-color-0), 0.06);
+    --theme-message-dark-selected: rgba(var(--theme-color-30), 0.18);
+    --theme-message-dark-text-primary: rgb(var(--theme-color-0));
+    --theme-message-dark-text-muted: rgba(var(--theme-color-0), 0.78);
 }
 
 /* ===== MIDNIGHT GRADIENT OVERRIDE ===== */
 
 /* Dark Mode Midnight Gradient - Deep night sky */
 html.theme-darkV2 div[data-tid="experience-layout"] {
-    background: 
+    background:
         /* Distant city lights */
-        radial-gradient(circle at 15% 85%, 
+        radial-gradient(circle at 15% 85%,
             rgba(100, 116, 139, 0.4) 0%,     /* Soft city glow */
             rgba(71, 85, 105, 0.2) 25%,      /* Distant light */
             transparent 60%),
-        radial-gradient(circle at 85% 20%, 
+        radial-gradient(circle at 85% 20%,
             rgba(148, 163, 184, 0.3) 0%,     /* Moonlight glow */
             rgba(100, 116, 139, 0.15) 30%,   /* Soft glow */
             transparent 65%),
@@ -46,13 +63,13 @@ html.theme-darkV2 div[data-tid="experience-layout"] {
 
 /* Light Mode Midnight Gradient - Early dawn sky */
 html.theme-defaultV2 div[data-tid="experience-layout"] {
-    background: 
+    background:
         /* Dawn light */
-        radial-gradient(circle at 15% 85%, 
+        radial-gradient(circle at 15% 85%,
             rgba(100, 116, 139, 0.2) 0%,     /* Soft dawn glow */
             rgba(148, 163, 184, 0.15) 25%,   /* Light dawn */
             transparent 60%),
-        radial-gradient(circle at 85% 20%, 
+        radial-gradient(circle at 85% 20%,
             rgba(203, 213, 225, 0.25) 0%,    /* Morning light */
             rgba(226, 232, 240, 0.1) 30%,    /* Soft morning */
             transparent 65%),

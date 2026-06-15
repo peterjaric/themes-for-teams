@@ -101,18 +101,20 @@
 html.theme-darkV2 :root,
 html.theme-darkV2 .fui-FluentProvider {
     /* Neutral Backgrounds - Dark */
-    --colorNeutralBackground1: rgb(26, 29, 33) !important;
-    --colorNeutralBackground2: rgb(26, 29, 33) !important;
-    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground1: var(--theme-message-dark-canvas, rgb(36, 50, 69)) !important;
+    --colorNeutralBackground2: var(--theme-message-dark-canvas, rgb(36, 50, 69)) !important;
+    --colorNeutralBackground3: var(--theme-message-dark-canvas, rgb(36, 50, 69)) !important;
     --colorNeutralBackground4: var(--secondary-brand);
     --colorNeutralBackground5: var(--primary-pressed);
-    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
-    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
-    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: var(--theme-message-dark-elevated, rgb(36, 50, 69)) !important;
+    --colorNeutralBackground1Hover: var(--theme-message-dark-hover, rgb(255, 255, 255, .03)) !important;
+    --colorNeutralBackground4Selected: var(--theme-message-dark-selected, transparent) !important;
+    --backgroundCanvas: var(--theme-message-dark-canvas, rgb(36, 50, 69)) !important;
+
 
     /* Text Colors - Dark Mode */
-    --colorNeutralForeground3: #FAFAFA !important;
-    --colorNeutralForeground3BrandSelected: rgba(255, 255, 255, .8) !important;
+    --colorNeutralForeground3: var(--theme-message-dark-text-primary, #FAFAFA) !important;
+    --colorNeutralForeground3BrandSelected: var(--theme-message-dark-text-muted, rgba(255, 255, 255, .8)) !important;
 
     /* Default Backgrounds - Dark Mode */
     --colorDefaultBackground1: var(--primary-brand);
@@ -136,32 +138,33 @@ html.theme-darkV2 .fui-FluentProvider {
 html.theme-defaultV2 :root,
 html.theme-defaultV2 .fui-FluentProvider {
     /* Neutral Backgrounds - Light */
-    --colorNeutralBackground1: #ffffff !important;
-    --colorNeutralBackground2: #f8f8f8 !important;
-    --colorNeutralBackground3: #f0f0f0 !important;
+    --colorNeutralBackground1: var(--theme-message-light-canvas, #ffffff) !important;
+    --colorNeutralBackground2: var(--theme-message-light-subtle, #f8f8f8) !important;
+    --colorNeutralBackground3: var(--theme-message-light-elevated, #f0f0f0) !important;
     --colorNeutralBackground4: rgb(var(--theme-color-0)) !important;
     --colorNeutralBackground5: rgb(var(--theme-color-5)) !important;
-    --colorNeutralCardBackground: #ffffff !important;
-    --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
-    --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
+    --colorNeutralCardBackground: var(--theme-message-light-canvas, #ffffff) !important;
+    --colorNeutralBackground1Hover: var(--theme-message-light-hover, rgba(0, 0, 0, .04)) !important;
+    --colorNeutralBackground4Selected: var(--theme-message-light-selected, rgba(0, 0, 0, .04)) !important;
+    --backgroundCanvas: var(--theme-message-light-canvas, #ffffff) !important;
 
     /* Brand Background for User Messages - Match Neutral */
-    --colorBrandBackground2: #f8f8f8 !important;
+    --colorBrandBackground2: var(--theme-message-light-subtle, #f8f8f8) !important;
 
     /* Text Colors - Light Mode */
-    --colorNeutralForeground1: #222 !important;
-    --colorNeutralForeground2: #444 !important;
-    --colorNeutralForeground3: #666 !important;
-    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
+    --colorNeutralForeground1: var(--theme-message-light-text-primary, #222) !important;
+    --colorNeutralForeground2: var(--theme-message-light-text-secondary, #444) !important;
+    --colorNeutralForeground3: var(--theme-message-light-text-tertiary, #666) !important;
+    --colorNeutralForeground3BrandSelected: var(--theme-message-light-text-inverse, #FAFAFA) !important;
 
     /* Default Backgrounds - Light Mode */
-    --colorDefaultBackground1: #ffffff !important;
-    --colorDefaultBackground2: #f8f8f8 !important;
-    --colorDefaultBackground3: #f0f0f0 !important;
+    --colorDefaultBackground1: var(--theme-message-light-canvas, #ffffff) !important;
+    --colorDefaultBackground2: var(--theme-message-light-subtle, #f8f8f8) !important;
+    --colorDefaultBackground3: var(--theme-message-light-elevated, #f0f0f0) !important;
     --colorDefaultBackground4: rgb(var(--theme-color-0)) !important;
     --colorDefaultBackground5: rgb(var(--theme-color-5)) !important;
     --colorDefaultBackground6: rgb(var(--theme-color-0)) !important;
-    --colorDefaultBackground7: #ffffff !important;
+    --colorDefaultBackground7: var(--theme-message-light-canvas, #ffffff) !important;
 
     /* Subtle Backgrounds - Light Mode */
     --colorSubtleBackground: rgba(var(--theme-color-40), .02) !important;
@@ -221,3 +224,4 @@ button[data-tid="post-new-message-type"],
 button[data-tid="quick-reply-placeholder-reply"] {
     color: var(--colorBrandForeground2) !important;
 }
+

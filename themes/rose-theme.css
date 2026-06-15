@@ -16,4 +16,21 @@
     --theme-color-80: 136, 14, 79;      /* Very dark - #880E4F */
     --theme-color-90: 74, 4, 78;        /* Gradient dark - #4A044E */
     --theme-color-100: 59, 7, 100;      /* Darkest - #3B0764 */
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(var(--theme-color-0));
+    --theme-message-light-subtle: rgb(var(--theme-color-5));
+    --theme-message-light-elevated: rgba(var(--theme-color-10), 0.45);
+    --theme-message-light-hover: rgba(var(--theme-color-80), 0.06);
+    --theme-message-light-selected: rgba(var(--theme-color-40), 0.12);
+    --theme-message-light-text-primary: rgb(var(--theme-color-100));
+    --theme-message-light-text-secondary: rgb(var(--theme-color-90));
+    --theme-message-light-text-tertiary: rgb(var(--theme-color-70));
+    --theme-message-light-text-inverse: rgb(255, 255, 255);
+    --theme-message-dark-canvas: rgb(var(--theme-color-90));
+    --theme-message-dark-elevated: rgb(var(--theme-color-80));
+    --theme-message-dark-hover: rgba(var(--theme-color-0), 0.06);
+    --theme-message-dark-selected: rgba(var(--theme-color-40), 0.22);
+    --theme-message-dark-text-primary: rgb(255, 244, 255);
+    --theme-message-dark-text-muted: rgba(255, 244, 255, 0.78);
 }

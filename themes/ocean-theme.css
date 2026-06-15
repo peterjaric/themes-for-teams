@@ -16,19 +16,36 @@
     --theme-color-80: 19, 78, 74;       /* Very deep ocean */
     --theme-color-90: 22, 78, 99;       /* Abyss blue */
     --theme-color-100: 12, 74, 110;     /* Ocean depths */
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(var(--theme-color-0));
+    --theme-message-light-subtle: rgb(var(--theme-color-5));
+    --theme-message-light-elevated: rgba(var(--theme-color-10), 0.45);
+    --theme-message-light-hover: rgba(var(--theme-color-80), 0.06);
+    --theme-message-light-selected: rgba(var(--theme-color-40), 0.12);
+    --theme-message-light-text-primary: rgb(var(--theme-color-100));
+    --theme-message-light-text-secondary: rgb(var(--theme-color-90));
+    --theme-message-light-text-tertiary: rgb(var(--theme-color-70));
+    --theme-message-light-text-inverse: rgb(255, 255, 255);
+    --theme-message-dark-canvas: rgb(var(--theme-color-90));
+    --theme-message-dark-elevated: rgb(var(--theme-color-80));
+    --theme-message-dark-hover: rgba(var(--theme-color-0), 0.06);
+    --theme-message-dark-selected: rgba(var(--theme-color-40), 0.20);
+    --theme-message-dark-text-primary: rgb(238, 255, 252);
+    --theme-message-dark-text-muted: rgba(238, 255, 252, 0.78);
 }
 
 /* ===== OCEAN GRADIENT OVERRIDE ===== */
 
 /* Dark Mode Ocean Gradient - Deep ocean depths */
 html.theme-darkV2 div[data-tid="experience-layout"] {
-    background: 
+    background:
         /* Deep ocean currents */
-        radial-gradient(circle at 25% 25%, 
+        radial-gradient(circle at 25% 25%,
             rgba(20, 184, 166, 0.5) 0%,      /* Ocean teal glow */
             rgba(13, 148, 136, 0.3) 30%,     /* Deep teal glow */
             transparent 65%),
-        radial-gradient(circle at 75% 75%, 
+        radial-gradient(circle at 75% 75%,
             rgba(15, 118, 110, 0.4) 0%,      /* Ocean blue glow */
             rgba(17, 94, 89, 0.2) 35%,       /* Deep ocean glow */
             transparent 70%),
@@ -46,13 +63,13 @@ html.theme-darkV2 div[data-tid="experience-layout"] {
 
 /* Light Mode Ocean Gradient - Shallow tropical waters */
 html.theme-defaultV2 div[data-tid="experience-layout"] {
-    background: 
+    background:
         /* Tropical water shimmer */
-        radial-gradient(circle at 25% 25%, 
+        radial-gradient(circle at 25% 25%,
             rgba(20, 184, 166, 0.3) 0%,      /* Ocean teal shimmer */
             rgba(45, 212, 191, 0.2) 30%,     /* Teal shimmer */
             transparent 65%),
-        radial-gradient(circle at 75% 75%, 
+        radial-gradient(circle at 75% 75%,
             rgba(94, 234, 212, 0.25) 0%,     /* Light teal shimmer */
             rgba(153, 246, 228, 0.15) 35%,   /* Turquoise shimmer */
             transparent 70%),

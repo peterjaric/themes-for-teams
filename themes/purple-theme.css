@@ -16,4 +16,21 @@
     --theme-color-10: 216, 186, 225;
     --theme-color-5: 227, 206, 235;
     --theme-color-0: 239, 225, 245;
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(var(--theme-color-0));
+    --theme-message-light-subtle: rgb(var(--theme-color-5));
+    --theme-message-light-elevated: rgba(var(--theme-color-10), 0.45);
+    --theme-message-light-hover: rgba(var(--theme-color-80), 0.06);
+    --theme-message-light-selected: rgba(var(--theme-color-40), 0.12);
+    --theme-message-light-text-primary: rgb(var(--theme-color-100));
+    --theme-message-light-text-secondary: rgb(var(--theme-color-90));
+    --theme-message-light-text-tertiary: rgb(var(--theme-color-70));
+    --theme-message-light-text-inverse: rgb(255, 255, 255);
+    --theme-message-dark-canvas: rgb(var(--theme-color-90));
+    --theme-message-dark-elevated: rgb(var(--theme-color-80));
+    --theme-message-dark-hover: rgba(var(--theme-color-0), 0.06);
+    --theme-message-dark-selected: rgba(var(--theme-color-40), 0.22);
+    --theme-message-dark-text-primary: rgb(249, 239, 253);
+    --theme-message-dark-text-muted: rgba(249, 239, 253, 0.78);
 }

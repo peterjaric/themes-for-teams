@@ -16,4 +16,21 @@
     --theme-color-80: 73, 72, 62;       /* Very dark - #49483E */
     --theme-color-90: 39, 40, 34;       /* Gradient dark - #272822 */
     --theme-color-100: 15, 16, 14;      /* Darkest - #0F100E */
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(250, 249, 244);
+    --theme-message-light-subtle: rgb(242, 239, 220);
+    --theme-message-light-elevated: rgba(230, 219, 116, 0.26);
+    --theme-message-light-hover: rgba(73, 72, 62, 0.08);
+    --theme-message-light-selected: rgba(166, 226, 46, 0.14);
+    --theme-message-light-text-primary: rgb(39, 40, 34);
+    --theme-message-light-text-secondary: rgb(73, 72, 62);
+    --theme-message-light-text-tertiary: rgb(117, 113, 94);
+    --theme-message-light-text-inverse: rgb(248, 248, 242);
+    --theme-message-dark-canvas: rgb(39, 40, 34);
+    --theme-message-dark-elevated: rgb(73, 72, 62);
+    --theme-message-dark-hover: rgba(248, 248, 242, 0.06);
+    --theme-message-dark-selected: rgba(166, 226, 46, 0.20);
+    --theme-message-dark-text-primary: rgb(248, 248, 242);
+    --theme-message-dark-text-muted: rgba(248, 248, 242, 0.78);
 }
