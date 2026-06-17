@@ -1,0 +1,52 @@
+/* Sun Shaft Theme for Microsoft Teams - Color Palette Only */
+
+/* ===== SUN SHAFT COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Gruvbox palette mapped to Teams brand/background slots */
+    --theme-color-0: 251, 241, 199;     /* light0 - #fbf1c7 */
+    --theme-color-5: 242, 229, 188;     /* light0_soft - #f2e5bc */
+    --theme-color-10: 235, 219, 178;    /* light1 - #ebdbb2 */
+    --theme-color-20: 213, 196, 161;    /* light2 - #d5c4a1 */
+    --theme-color-30: 250, 189, 47;     /* bright_yellow - #fabd2f */
+    --theme-color-40: 215, 153, 33;     /* neutral_yellow - #d79921 */
+    --theme-color-50: 214, 93, 14;      /* neutral_orange - #d65d0e */
+    --theme-color-60: 181, 118, 20;     /* faded_yellow - #b57614 */
+    --theme-color-70: 146, 131, 116;    /* gray - #928374 */
+    --theme-color-80: 80, 73, 69;       /* dark2 - #504945 */
+    --theme-color-90: 60, 56, 54;       /* dark1 - #3c3836 */
+    --theme-color-100: 40, 40, 40;      /* dark0 - #282828 */
+
+    /* Message Surface Colors */
+    --theme-message-light-canvas: rgb(var(--theme-color-0));
+    --theme-message-light-subtle: rgb(var(--theme-color-5));
+    --theme-message-light-elevated: rgba(var(--theme-color-20), 0.50);
+    --theme-message-light-hover: rgba(var(--theme-color-80), 0.08);
+    --theme-message-light-selected: rgba(var(--theme-color-40), 0.16);
+    --theme-message-light-text-primary: rgb(var(--theme-color-100));
+    --theme-message-light-text-secondary: rgb(var(--theme-color-90));
+    --theme-message-light-text-tertiary: rgb(var(--theme-color-70));
+    --theme-message-light-text-inverse: rgb(255, 248, 230);
+    --theme-message-dark-canvas: rgb(var(--theme-color-90));
+    --theme-message-dark-elevated: rgb(var(--theme-color-80));
+    --theme-message-dark-hover: rgba(var(--theme-color-0), 0.08);
+    --theme-message-dark-selected: rgba(var(--theme-color-30), 0.22);
+    --theme-message-dark-text-primary: rgb(var(--theme-color-10));
+    --theme-message-dark-text-secondary: rgb(var(--theme-color-20));
+    --theme-message-dark-text-tertiary: rgb(189, 174, 147);
+    --theme-message-dark-text-inverse: rgb(var(--theme-color-0));
+    --theme-message-dark-text-muted: rgba(168, 153, 132, 0.78);
+    --theme-reply-border-color: rgb(var(--theme-color-30));
+}
+
+/* ===== SUN SHAFT BACKGROUND OVERRIDE ===== */
+
+/* Dark Mode Sun Shaft Background - flat Gruvbox dark */
+html.theme-darkV2 div[data-tid="experience-layout"] {
+    background: rgb(var(--theme-color-100)) !important;
+}
+
+/* Light Mode Sun Shaft Background - flat Gruvbox parchment */
+html.theme-defaultV2 div[data-tid="experience-layout"] {
+    background: rgb(var(--theme-color-0)) !important;
+}

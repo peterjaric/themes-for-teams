@@ -28,74 +28,12 @@
     /* Dark accents */
     --accent-darker: rgb(var(--theme-color-80)) !important;
     /* Darker accents */
+    --reply-preview-border: var(--theme-reply-border-color, var(--primary-brand)) !important;
 }
 
-/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
-:root,
-.fui-FluentProvider {
-    /* Primary Brand Colors */
-    --colorBrandBackground: var(--primary-brand);
-    --colorBrandBackgroundHover: var(--primary-hover);
-    --colorBrandBackgroundPressed: var(--primary-pressed);
-    --colorBrandBackgroundSelected: var(--primary-selected);
-    --colorBrandBackgroundStatic: var(--primary-selected);
-
-    --colorBrandBackground2Hover: var(--primary-brand);
-    --colorBrandBackground2Pressed: var(--secondary-pressed);
-    --colorBrandBackground3Static: var(--primary-brand);
-    --colorBrandBackground4Static: var(--secondary-brand);
-
-    --colorCompoundBrandBackground: var(--primary-hover);
-    --colorCompoundBrandBackgroundHover: var(--primary-selected);
-    --colorCompoundBrandBackgroundPressed: var(--primary-brand);
-
-    /* Brand Foreground Colors */
-    --colorBrandForeground1: var(--primary-selected);
-    --colorBrandForeground2: var(--primary-brand);
-    --colorBrandForegroundLink: var(--primary-brand);
-    --colorBrandForegroundLinkHover: var(--primary-selected);
-    --colorBrandForegroundLinkPressed: var(--secondary-brand);
-    --colorBrandForegroundLinkSelected: var(--primary-selected);
-
-    --colorBrandForegroundInverted: var(--primary-brand);
-    --colorBrandForegroundInvertedHover: var(--secondary-brand);
-    --colorBrandForegroundInvertedPressed: var(--primary-pressed);
-    --colorBrandForegroundOnLight: var(--primary-brand);
-    --colorBrandForegroundOnLightHover: var(--secondary-brand);
-    --colorBrandForegroundOnLightPressed: var(--primary-pressed);
-    --colorBrandForegroundOnLightSelected: var(--secondary-brand);
-
-    --colorCompoundBrandForeground1: var(--primary-selected);
-    --colorCompoundBrandForeground1Hover: var(--primary-brand);
-    --colorCompoundBrandForeground1Pressed: var(--primary-brand);
-
-    /* Neutral Foreground Brand Colors */
-    --colorNeutralForeground2BrandHover: var(--primary-brand);
-    --colorNeutralForeground2BrandPressed: var(--primary-selected);
-    --colorNeutralForeground2BrandSelected: var(--primary-brand);
-    --colorNeutralForeground3BrandHover: var(--primary-brand);
-    --colorNeutralForeground3BrandPressed: var(--primary-selected);
-
-    /* Stroke Colors */
-    --colorBrandStroke1: var(--primary-brand);
-    --colorBrandStroke2: var(--secondary-brand);
-    --colorBrandStroke2Hover: var(--primary-brand);
-    --colorBrandStroke2Pressed: var(--primary-pressed);
-    --colorBrandStroke2Contrast: var(--secondary-brand);
-    --colorCompoundBrandStroke: var(--primary-selected);
-    --colorCompoundBrandStrokeHover: var(--primary-brand);
-    --colorCompoundBrandStrokePressed: var(--primary-brand);
-    --colorNeutralStrokeAccessibleSelected: var(--primary-brand);
-
-    /* Avatar Colors */
-    --colorAvatar: var(--primary-brand);
-    --colorAvatarBackground: var(--primary-brand);
-
-    /* Teams Specific Colors */
-    --colorTeamsBrand1Hover: var(--primary-brand);
-    --colorTeamsBrand1Pressed: var(--primary-selected);
-    --colorTeamsBrand1Selected: var(--primary-brand);
-}
+/* ===== SHARED BRAND COLORS ===== */
+/* Brand color assignments are now applied via inline !important styles in content.js
+   to override Teams' default Fluent colors. This stylesheet only needs primary vars. */
 
 /* ===== DARK MODE - Teams' theme-darkV2 ===== */
 html.theme-darkV2 :root,

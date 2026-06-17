@@ -33,6 +33,7 @@
     --theme-message-dark-selected: rgba(var(--theme-color-30), 0.18);
     --theme-message-dark-text-primary: rgb(var(--theme-color-0));
     --theme-message-dark-text-muted: rgba(var(--theme-color-0), 0.78);
+    --theme-reply-border-color: rgb(var(--theme-color-30));
 }
 
 /* ===== MIDNIGHT GRADIENT OVERRIDE ===== */

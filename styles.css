@@ -1,13 +1,13 @@
 /* Global Teams UI Adjustments */
 
 /* Apply font with anti-aliasing to common Teams elements */
-html {   
+html {
     /* Enhanced font smoothing and anti-aliasing */
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;
     font-smooth: always !important;
-    
+
     /* Additional rendering improvements */
     font-variant-ligatures: common-ligatures !important;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
@@ -20,28 +20,32 @@ html {
 div[data-tid="channel-pane-viewport"] {
     scrollbar-gutter: both-edges !important;
 }
-div[data-tid="message-pane-body"] > .fui-Primitive {
+
+div[data-tid="message-pane-body"]>.fui-Primitive {
     padding-left: 16px !important;
     padding-right: 16px !important;
     max-width: 100% !important;
 }
+
 div[data-tid='message-pane-list-runway'],
 div[data-tid='channel-replies-runway'],
 div[data-tid="channel-pane-runway"] {
     max-width: 100% !important;
     padding: 0 !important;
 }
+
 div[data-tid="channel-pane-message"] {
     max-width: 100% !important;
     padding: 0 !important;
 }
-.fui-ChatMessage > div:first-child {
+
+.fui-ChatMessage>div:first-child {
     margin-left: 55px !important;
     font-weight: bold !important;
 }
 
-/* Broke due to threads 
-span[data-tid="message-avatar"] {
+/* Broke due to threads. */
+/* span[data-tid="message-avatar"] {
     margin-left: 12px;
     margin-top: -26px;
 } */
@@ -50,46 +54,70 @@ span[data-tid="message-avatar"] {
 .fui-Avatar__image {
     border-radius: 4px !important;
 }
+
 /* Fix an alignment issue */
 .fui-ChatMessage__avatar {
     width: 40px !important;
 }
 
 /* Reply Avatars are too small */
+/*
 span[data-tid="reply-message-header-avatar"] {
     width: 30px !important;
     height: 30px !important;
 }
+*/
+
+/* Hide the quick reply avatar. I don't need to see my own avatar there. */
+span[data-tid="post-message-quick-reply-avatar"] {
+    display: none !important;
+}
+
+/* Move reply button to save space */
+div:has(> div > span[data-tid="post-message-quick-reply-avatar"]) {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+
+/* Hide the reaction summary, I can react via the hover menu. */
+[data-tid="channel-message-reaction-summary"] {
+    display: none !important;
+}
 
 /* Borders are ugly! */
-.fui-Flex {
+/* .fui-Flex {
     border-bottom-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     border-top-color: transparent !important;
-}
+} */
+
+
 div[data-tid="title-bar"] {
     border-bottom-width: 0px !important;
 }
 
 
 /* Bold face names in replies */
-div[data-tid="reply-message-header"] > div > div > span {
+div[data-tid="reply-message-header"]>div>div>span {
     font-weight: bold !important;
 }
 
 /* Fade time stamps and message statuses */
 time,
-div[data-tid="reply-message-header"] > div > div > time {
+div[data-tid="reply-message-header"]>div>div>time {
     font-weight: normal !important;
     color: #999 !important;
-} 
+}
+
 div[data-tid="status-bar"] div span {
     color: #999 !important;
     font-style: italic;
 }
+
 /* Fix the @ mentioned you icon -- fell off screen! */
-div[data-tid="reply-message-header"] > div[id*="badge-"] {
+div[data-tid="reply-message-header"]>div[id*="badge-"] {
     right: 16px !important;
 }
 
@@ -109,7 +137,7 @@ div[data-tid="post-message-subheader"] > div > div div {
     */
 
 /* Move next to avatar */
-/* Disabled - THREADS breaks.
+/* Disabled - THREADS breaks. Peter: enabling since we do not have threads */
 h2[data-tid="subject-line"] {
     position: absolute !important;
     top: 11px !important;
@@ -124,33 +152,70 @@ div[data-tid="post-message-subheader"] {
     top: 36px !important;
     left: 60px !important;
 }
-*/
+/* time[data-tid="timestamp"] {
+    position: absolute !important;
+    top: 0px !important;
+    right: 10px !important;
+} */
+/* [data-tid="post-message-subheader"] {
+    width: 80% !important;
+}
+
+[data-tid="post-message-subheader"]>div {
+    width: 100% !important;
+}
+ */
+[data-tid="post-message-subheader"]>div>div {
+    /* width: 100% !important; */
+    flex-direction: row !important;
+    gap: 8px !important;
+    /* justify-content: space-between !important; */
+}
+
 
 /* Expand the 'Post in channel' box */
-div[data-tid="message-pane-footer"] .fui-Flex {
+/* div[data-tid="message-pane-footer"] .fui-Flex {
     max-width: 100% !important;
+} */
+
+/* Align 'Post in channel' box better */
+div[data-tid="message-pane-footer"] {
+    margin-left: 16px !important;
+    padding-left: 0 !important;
+    margin-top: 8px !important;
+}
+div[data-tid="message-pane-footer"] .fui-Primitive {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
 }
 
-div[data-tid="chat-pane-item"] {
+/* div[data-tid="chat-pane-item"] {
     margin-bottom: 1em !important;
-}
+} */
+
 /* Reduce 14px on the left side of the list of chats/channels */
 div[data-tid="simple-collab-dnd-rail"] {
-    margin-left: 0 !important; /* 14px */
+    margin-left: 0 !important;
+    /* 14px */
     padding: 0 !important;
-    scrollbar-gutter: auto !important; ;
+    scrollbar-gutter: auto !important;
+    ;
 }
 
 /* Get rid of gap on right side of 'my message' */
 .fui-ChatMyMessage {
-   margin-left: 55px !important;
-   margin-right: 0px !important; /* */
+    margin-left: 55px !important;
+    margin-right: 0px !important;
+    /* */
 }
-.fui-ChatMyMessage > div {
+
+.fui-ChatMyMessage>div {
     margin-left: 0 !important;
     justify-content: normal !important;
     margin-bottom: 12px !important;
 }
+
 .fui-ChatMyMessage time:before {
     content: "You " !important;
     color: #fff;
@@ -166,7 +231,7 @@ div[data-tid="message-tombstone"] {
 }
 
 /* Force all links to be bright blue */
-button[data-tid="post-new-message-type"],
+/* button[data-tid="post-new-message-type"],
 button[data-tid="response-summary-button"] > span,
 a, a:link, .ui-link {
     color: rgb(29, 155, 209) !important;
@@ -180,10 +245,10 @@ a:hover {
 
 div[data-testid="simple-collab-rail"] {
     border-top-left-radius: 16px !important;
-}
+} */
 
 /* Always Blue Links */
-.fui-FluentProvider {
+/* .fui-FluentProvider {
     --colorStrokeFocus2: transparent !important;
     --colorBrandForeground1: #2784ff !important;
     --colorBrandForeground2: #2784ff !important;
@@ -191,30 +256,43 @@ div[data-testid="simple-collab-rail"] {
     --colorBrandForegroundLinkHover: #2784ff !important;
     --colorBrandForegroundLinkPressed: #2784ff !important;
     --colorBrandForegroundLinkSelected: #2784ff !important;
-}
+} */
 
-/* Indent replies preview, blue left border */
+/* Indent replies preview, theme-colored left border */
 div[data-tid="response-surface"] {
     margin-left: 22px;
-    border-left: 3px solid #2684ff !important;
+    /* border-left: 3px solid var(--reply-preview-border, #2684ff) !important; */
 }
+
+/* Remove ugly lines between messages and replies */
+div[data-tid="channel-pane-message"] * {
+    border-top: none;
+}
+
+[data-tid="response-surface"]:has(button[data-tid="response-summary-button"]) div:nth-child(2) {
+    display: none !important;
+}
+
 /* Move 'Open X replies from...' to end */
-div[data-tid="response-surface"] > div:first-child {
+/* div[data-tid="response-surface"]>div:first-child {
     order: 999 !important;
-}
+} */
 
 /* Left border for embedded content and replies preview */
 div[data-testid="componentUXWrapperTestId"] {
     margin-top: 1em;
 }
+
 div[data-tid="adaptive-card"] {
     margin: 0 !important;
     border: 1px solid #333;
     border-radius: 4px;
 }
+
 div[data-tid="adaptive-card"]:hover {
     background-color: var(--colorNeutralBackground1Hover) !important;
 }
+
 div[data-tid="message-extension-card-footer"],
 div[data-tid="card-action-failure"] {
     font-size: 80% !important;
@@ -224,15 +302,18 @@ div[data-tid="card-action-failure"] {
 /* Light Mode - Teams' theme-defaultV2 */
 html.theme-defaultV2 :root,
 html.theme-defaultV2 .fui-FluentProvider {
+
     button[data-tid="add-reaction-picker-entry-point-button"],
     button[data-tid="diverse-reaction-pill-button"] {
         border: none !important;
         background: #f2f2f2 !important;
     }
+
     button[data-tid="add-reaction-picker-entry-point-button"] svg path {
         fill: var(--colorBrandBackground) !important;
     }
 }
+
 /* Better Dark Mode Emojis */
 html.theme-darkV2 :root,
 html.theme-darkV2 .fui-FluentProvider {
@@ -248,12 +329,12 @@ div[id*="message-body-"] {
 }
 
 /* Active/Selected Items */
-.selected,
+/* .selected,
 .active,
 .is-selected,
 [aria-selected="true"] {
     border-left-color: var(--colorBrandForeground1) !important;
-}
+} */
 
 /* Center the 'See all your teams' Link */
 div[data-tid="see-all-teams-button"] {
@@ -267,25 +348,31 @@ code {
     padding: 0 3px !important;
     border-color: rgba(232, 232, 232, 0.13) !important;
 }
+
 /* inline code only — block code inherits Teams' line-height so numbers don't drift */
-:not(pre) > code {
+:not(pre)>code {
     line-height: 1.8 !important;
 }
+
 pre code {
     color: #fff !important;
 }
+
 /* Fix line numbers overlapping code — Teams removed this padding, restore it stably */
 pre[itemid^="codeBlockEditor"] {
     padding: 14px 12px 8px 54px !important;
 }
+
 /* "strings" */
 code .hljs-string {
     color: #e6db74 !important;
 }
+
 /* const, let, function, etc. */
 code .hljs-keyword {
     color: #00a7aa !important
 }
+
 /* function names */
 .hljs-function {
     color: #98e342 !important;
@@ -306,20 +393,33 @@ div[data-testid="notification-wrapper"] {
 .fui-Overflow {
     flex-wrap: wrap !important;
 }
+
 div[data-testid="simple-collab-left-rail-sticky-filter-v2"] {
     padding-left: 8px !important;
 }
+
 button[data-testid="simple-collab-left-rail-sticky-filter-collapse-expand-filters-button"] {
     display: none !important;
 }
-div[data-overflow-item] { display: block !important; }
+
+div[data-overflow-item] {
+    display: block !important;
+}
 
 
-/* Get rid of "see More Content" nonsense */ 
+/* Get rid of "see More Content" nonsense */
 div[id*="see-more-content"] {
     overflow-y: auto !important;
     max-height: none !important;
 }
+
 #see-more-container {
     display: none !important;
+}
+
+
+/* Tone down the colors on icons in the teams and channels list */
+[data-item-type="teams-and-channels"] .fui-Avatar__image {
+    /* Dim colors */
+    filter: saturate(50%) !important;
 }

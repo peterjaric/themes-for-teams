@@ -33,5 +33,6 @@
     --theme-message-dark-selected: rgba(var(--theme-color-40), 0.22);
     --theme-message-dark-text-primary: rgb(235, 250, 255);
     --theme-message-dark-text-muted: rgba(235, 250, 255, 0.78);
+    --theme-reply-border-color: rgb(var(--theme-color-40));
 }
 
